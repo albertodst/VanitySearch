@@ -800,7 +800,7 @@ void VanitySearch::output(string addr,string pAddr,string pAddrHex) {
   bool needToClose = false;
 
   if (outputFile.length() > 0) {
-    f = fopen(outputFile.c_str(), "w");
+    f = fopen(outputFile.c_str(), "a");
     if (f == NULL) {
       fprintf(stderr,"Cannot open %s for writing\n", outputFile.c_str());
       f = stdout;
